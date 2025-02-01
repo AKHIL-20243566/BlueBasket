@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueBasket</title>
     <link rel="stylesheet" href="css/style.css"> <!--calling the style css file-->
-    <link rel="icon" href="imageslogo.png">
+
 </head>
 <body>
+
+    <!--creating navigation bar (logo reload and other feautures like browse about sign up and shopping cart adding counter)-->
+
     <nav class="navbar">
         <a href="index.html" class="brand">
-            <img src="images/logo.png" alt="Logo" class="logo">
-            <span>BlueBasket</span>
+            <link rel="icon" href="images/logo.png">
+            <span><img src="images/logo2.png" alt="Logo" 
+                width="200"class="logo"></span>
         </a>
+
+        <!--calling the html files(products,signup,cart)-->
+        <div class="nav-links">
+            <a href="products.html">Browse</a>
+            <a href="#about">About</a>
+            <a href="signup.html"class="auth-link">Sign Up</a>
+            <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
+
+        </div>
+    </nav>
+
+    <main class="container">
+        <!--Page specific content-->
+        <section class="hero">
+            <h1>"Sustainable shopping made simple"</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for items...">
+                <button class="search-btn">Search</button>
+            </div>
+        </section>
+        <section class="product-grid" id="featured-products">
+           <!--Products added using Js--> 
+        </section>
+        </main>
+
+        <script src="js/main.js" type="module"></script>
 </body>
 </html>
