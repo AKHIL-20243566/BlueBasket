@@ -49,3 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+// Add error display element
+<div class="error-message"></div>
+function showError(message) {
+    const errorEl = document.querySelector('.error-message');
+    errorEl.textContent = message;
+    setTimeout(() => errorEl.textContent = '', 3000);
+}

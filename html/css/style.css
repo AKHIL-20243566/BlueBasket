@@ -172,7 +172,27 @@ a {
     font: lighter;
     font-size:xx-large;
     color:rgb(0, 45, 113);
-    text-decoration: none;
+    text-decoration: none; 
+}
+/* making a loading feature */
+.loading {
+    position: relative;
+    pointer-events: none;
+}
 
-    
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
