@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- about us page  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Blue Basket</title>
+    <link rel="stylesheet" href="css/style.css"> 
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,21 +21,20 @@
         .about-banner img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: fill;
         }
         .banner-text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.6);
             color: white;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 25px;
+            background-color: rgba(100, 202, 235, 0.2);
         }
         .highlight {
-            color: 
-            #10f7ff;
+            color: #27519c;
         }
         .about-content {
             padding: 40px;
@@ -50,8 +49,7 @@
         }
         hr {
             width: 50px;
-            border: 2px solid 
-            #10f7ff;
+            border: 2px solid #27519c;
             margin: 10px auto;
         }
         .text-section {
@@ -66,11 +64,27 @@
             margin: 0 auto;
         }
     </style>
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <link rel="icon" href="images/logo.png">
+            <span><img src="images/logo2.png" alt="Logo" 
+                width="200"class="logo"></span>
+        </a>
+
+    <!--calling the html files(products,signup,cart)-->
+
+        <div class="nav-links">
+            <a href="products.html">Browse</a>
+            <a href="about.html">About</a>
+            <a href="signup.html"class="auth-link">Sign Up</a>
+            <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
+
+        </div>
+    </nav>
 </head>
 <body>
-    <!-- giving description about our project -->
     <section class="about-banner">
-        <img src="banner.jpg" alt="Community of Happy Customers">
+        <img src="images/aboutus.jpg" alt="Image of clothes">
         <div class="banner-text">
             <h2>GET TO <span class="highlight">KNOW</span> US</h2>
         </div>
@@ -110,3 +124,4 @@
     </section>
 </body>
 </html>
+
