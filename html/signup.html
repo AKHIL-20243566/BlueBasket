@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    
 }
 
 body {
@@ -18,13 +19,15 @@ body {
     align-items: center;
     justify-content: center;
     background: #f4f4f4;
+    
 }
+
 
 .container {
     display: flex;
     width: 900px;
-    background: #fff;
-    border-radius: 10px;
+    background: #72d0f947;
+    border-radius: 32px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -32,13 +35,14 @@ body {
 .form-container {
     width: 40%;
     padding: 40px;
-    background: #fff;
+    background: #efefef;
 }
 
 .form-container h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
+
 
 .google-signup {
     width: 100%;
@@ -47,7 +51,7 @@ body {
     background: #4285F4;
     color: white;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
     margin-bottom: 10px;
 }
@@ -102,10 +106,31 @@ input {
 }
 
 
+/* hover lines under navigation bar icons */
+.login{
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  .login::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: black;
+    transition: width 0.5s ease; 
+  }
+  .login:hover::after {
+    width: 100%; 
+  }
+
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="images/basketunder.png">
         <div class="form-container">
             <h2>Create account</h2>
             <button class="google-signup">Sign up with Google</button>
@@ -122,7 +147,8 @@ input {
                 
                 <button type="submit" class="create-account">Create account</button>
             </form>
-            <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+            <p class="login-link">Already have an account? 
+                <a class="login" href="#">Log in</a></p>
         </div>
         
     </div>
