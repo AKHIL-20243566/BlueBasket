@@ -64,6 +64,9 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 0.5%;
+    height: 50px;
+    left: 22%;
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
@@ -271,11 +274,11 @@ a {
 .ft-panel{
     background-color: #c4e4f4 ;
     color:black;
-    height: 100px;
+    height: 80px;
     font-size: 0.7rem;
     width: 100%;
     text-align: center;
-    position:fixed;
+    position:relative;
     bottom: 0;
     left:0;
 }
@@ -292,3 +295,31 @@ a {
     text-align: center;
 }
 
+.panel{
+    height:40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content:left;
+
+}
+
+.panel-cont{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+}
+
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+
+}
+
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+
+}
