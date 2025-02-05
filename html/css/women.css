@@ -1,0 +1,119 @@
+/* basic styles */
+:root {
+    --primary-blue: #1A5CFF;
+    --eco-green: #00C897;
+    --accent-orange: #FFA34D;
+    --dark-1: #2D3436;
+    --light-1: #F8F9FA;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+}
+/* alligning the navigation bar */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI',system-ui;
+}
+body{
+    background:var(--light-1);
+    color:var(--dark-1);
+    line-height:1.6;
+}
+/* Components that makes the nav bar pop out*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: index 1000;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+}
+.logo{
+    height: 40px;
+    width:auto;
+}
+.nav-links{
+    display:flex;
+    gap:2rem;
+    align-items:center;
+}
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark-1);
+    font-weight:500;
+    transition:color 0.3s ease;
+}
+.cart-count{
+    background:var(--primary-blue);
+    color:white;
+    padding:0.2rem 0.5 rem;
+    border-radius:50%;
+    font-size:0.9rem;
+}
+
+a{
+    text-decoration:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(0, 35, 118);    
+    padding-right: 20px;
+    font-size:x-large; 
+}
+/* hover lines under navigation bar icons */
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; 
+  }
+  a:hover::after {
+    width: 70%; 
+  }
+
+
+
+.panel{
+    height:40px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content:left;
+
+}
+
+.panel-cont{
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    
+}
+
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+
+}
+
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+
+}
