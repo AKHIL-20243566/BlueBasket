@@ -92,3 +92,82 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render products
     renderProducts();
 });
+
+// function searchProducts() {
+//     let input = document.getElementById('search').value.toLowerCase();
+//     let products = document.querySelectorAll('.product');
+
+//     products.forEach(product => {
+//         let productName = product.getAttribute('data-name').toLowerCase();
+//         if (productName.includes(input)) {
+//             product.style.display = "block";
+//         } else {
+//             product.style.display = "none";
+//         }
+//     });
+// }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("search");
+    const searchDropdown = document.getElementById("search-dropdown");
+
+    // Sample product data (Replace with actual product fetching logic)
+    const products = [
+        { name: "Men's Jacket", link: "men.html" },
+        { name: "Men's Shoes", link: "men.html" },
+        { name: "Women's Dress", link: "women.html" },
+        { name: "Ladies Jeans", link: "women.html" },
+        { name: "Children's Toys", link: "children.html" },
+        { name: "Children's Cycles", link: "children.html" },
+        { name: "Phone", link: "elect.html" },
+        { name: "Laptop", link: "elect.html" },
+        { name: "Fiction Book", link: "book.html" },
+        { name: "Non-Fiction Book", link: "book.html" }
+    ];
+
+    // Function to filter products based on search input
+    function filterProducts(query) {
+        return products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
+    }
+
+    // Function to update the search dropdown with results
+    function updateSearchDropdown() {
+        const query = searchInput.value.trim();
+        searchDropdown.innerHTML = ""; // Clear previous results
+
+        if (query.length === 0) {
+            searchDropdown.style.display = "none"; // Hide dropdown if empty
+            return;
+        }
+
+        const filteredProducts = filterProducts(query);
+
+        if (filteredProducts.length === 0) {
+            searchDropdown.innerHTML = `<div class="no-results">No results found</div>`;
+        } else {
+            filteredProducts.forEach(product => {
+                const item = document.createElement("div");
+                item.classList.add("search-item");
+                item.textContent = product.name;
+                item.addEventListener("click", () => {
+                    window.location.href = product.link; // Navigate on click
+                });
+                searchDropdown.appendChild(item);
+            });
+        }
+
+        searchDropdown.style.display = "block"; // Show dropdown
+    }
+
+    // Event Listeners
+    searchInput.addEventListener("keyup", updateSearchDropdown);
+    searchInput.addEventListener("focus", updateSearchDropdown);
+
+    // Hide dropdown when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!searchInput.contains(event.target) && !searchDropdown.contains(event.target)) {
+            searchDropdown.style.display = "none";
+        }
+    });
+});
