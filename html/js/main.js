@@ -121,11 +121,24 @@ document.addEventListener("DOMContentLoaded", function () {
         { name: "Ladies Jeans", link: "women.html" },
         { name: "Women's Shoes", link: "women.html" },
         { name: "Children's Toys", link: "children.html" },
+        { name: "Children's Clothes", link: "children.html" },
+        { name: "Children's Cap", link: "children.html" },
         { name: "Children's Cycles", link: "children.html" },
+        { name: "Stroller", link: "children.html" },
+        { name: "Puzzles", link: "children.html" },
+        { name: "Outdoor Playground Sets", link: "children.html" },
+        { name: "Children's Backpacks", link: "children.html" },
+        { name: "Action Figures", link: "children.html" },
+        { name: "Lego", link: "children.html" },
         { name: "Phone", link: "elect.html" },
+        { name: "Charger", link: "elect.html" },
+        { name: "XBOX", link: "elect.html" },
+        { name: "Vintage Camera", link: "elect.html" },
+        { name: "Cooler", link: "elect.html" },
         { name: "Laptop", link: "elect.html" },
-        { name: "Fiction Book", link: "book.html" },
-        { name: "Non-Fiction Book", link: "book.html" }
+        { name: "Fiction Books", link: "book.html" },
+        { name: "Non-Fiction Books", link: "book.html" },
+        { name: "Educational Books", link: "book.html" }
     ];
 
     // Function to filter products based on search input
