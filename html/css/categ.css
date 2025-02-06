@@ -120,7 +120,7 @@ a {
 
 .items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns:repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
@@ -153,4 +153,19 @@ a {
 
 .item-card {
     position: relative;
+}
+
+
+
+@media (max-width: 768px) {
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .items-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
