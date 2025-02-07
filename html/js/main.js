@@ -33,44 +33,7 @@ class CartManager{
     }
 }
 
-// // Product Loader
-// const PRODUCTS = [
-//     {
-//         id: 1,
-//         name: "Vintage Camera",
-//         price: 45.99,
-//         image: "images/vintage camera.jpg",
-//         condition: "Used"
-//     },
-//     {
-//         id: 2,
-//         name: "Designer Jeans",
-//         price: 29.99,
-//         image: "designer jeans.jpg",
-//         condition: "Like New"
-//     }
-// ];
 
-function renderProducts() {
-    const grid = document.getElementById('featured-products');
-    if(!grid) return;
-
-    grid.innerHTML = PRODUCTS.map(product => `
-        <article class="product-card">
-            <img src="${product.image}" alt="${product.name}" class="product-image">
-            <div class="product-info">
-                <h3>${product.name}</h3>
-                <div class="product-meta">
-                    <span class="product-price">$${product.price}</span>
-                    <span class="product-condition">${product.condition}</span>
-                </div>
-                <button class="add-to-cart" data-id="${product.id}">
-                    Add to Cart
-                </button>
-            </div>
-        </article>
-    `).join('');
-}
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', () => {
