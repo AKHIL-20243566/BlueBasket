@@ -33,23 +33,23 @@ class CartManager{
     }
 }
 
-// Product Loader
-const PRODUCTS = [
-    {
-        id: 1,
-        name: "Vintage Camera",
-        price: 45.99,
-        image: "vintage camera.jpg",
-        condition: "Used"
-    },
-    {
-        id: 2,
-        name: "Designer Jeans",
-        price: 29.99,
-        image: "designer jeans.jpg",
-        condition: "Like New"
-    }
-];
+// // Product Loader
+// const PRODUCTS = [
+//     {
+//         id: 1,
+//         name: "Vintage Camera",
+//         price: 45.99,
+//         image: "images/vintage camera.jpg",
+//         condition: "Used"
+//     },
+//     {
+//         id: 2,
+//         name: "Designer Jeans",
+//         price: 29.99,
+//         image: "designer jeans.jpg",
+//         condition: "Like New"
+//     }
+// ];
 
 function renderProducts() {
     const grid = document.getElementById('featured-products');
@@ -93,19 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     renderProducts();
 });
 
-// function searchProducts() {
-//     let input = document.getElementById('search').value.toLowerCase();
-//     let products = document.querySelectorAll('.product');
-
-//     products.forEach(product => {
-//         let productName = product.getAttribute('data-name').toLowerCase();
-//         if (productName.includes(input)) {
-//             product.style.display = "block";
-//         } else {
-//             product.style.display = "none";
-//         }
-//     });
-// }
 
 
 document.addEventListener("DOMContentLoaded", function () {

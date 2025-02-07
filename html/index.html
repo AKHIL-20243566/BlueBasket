@@ -24,10 +24,10 @@
     <!--calling the html files(products,signup,cart)-->
 
         <div class="nav-links">
-            <a href="products.html">Browse</a>
+            
             <a href="about.html">About</a>
             <a href="signup.html"class="auth-link">Sign Up</a>
-            <a href="slidetest.html"class="auth-link">Preview</a>
+            
             <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
 
         </div>
@@ -56,18 +56,67 @@
 
     <main class="container">
      <!--Page specific content-->
-        <section class="hero">
+        <div class="hero">
             <div class="row">
                 <div class="col1">
                     <img src="images/slogan.png">
                 </div> 
             </div>
             
-        </section>
+        </div>
         <section class="product-categories">
-            <h2>Featured Products</h2>
-            <div class="product-grid" id="featured-products"></div>
+            <h2 style="margin-left: 43%;">Featured Products</h2>
+            <div class="product-grid" id="featured-products">
+                <div class="product-card">
+                    <img src="images/vintage camera.jpg" alt="Vintage Camera" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Vintage Camera</h2>
+                        <p class="product-price"><span class="price">$45.99</span></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/glasses.jpg" alt="Designer Sunglasses" class="product-image">
+                    <div class="product-info">
+                        <h2 class="product-title">Designer Sunglasses</h2>
+                        <p class="product-price"><span class="price">$45.99</span></p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+            </div>
         </section>
+
+        <h2 style="margin-left: 43%;">Shop by Categories</h2>
+        <br>
+
+        <div class="categories">
+            <div class="category-item women">
+                <a href="women.html">
+                    <img src="images/women.png" alt="Women Category" class="product-image">
+                </a>
+            </div>
+            <div class="category-item men">
+                <a href="men.html">
+                    <img src="images/men.png" alt="Men Category" class="product-image">
+                </a>
+            </div>
+            <div class="category-item children">
+                <a href="children.html">
+                    <img src="images/children.png" alt="Children Category" class="product-image">
+                </a>
+            </div>
+            <div class="category-item electronics">
+                <a href="elect.html">
+                    <img src="images/electronics.png" alt="Electronics Category" class="product-image">
+                </a>
+            </div>
+            <div class="category-item books" style="margin-bottom: 20px;">
+                <a href="book.html">
+                    <img src="images/books.png" alt="Books Category" class="product-image">
+                </a>
+            </div>
+        </div>
         </main>
 
         

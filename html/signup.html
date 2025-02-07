@@ -31,6 +31,7 @@ body {
     border-radius: 32px;
     overflow: hidden;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
 }
 
 .form-container {
@@ -126,9 +127,97 @@ input {
   .login:hover::after {
     width: 100%; 
   }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    z-index: index 1000;
+    width: 100%;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+}
+.logo{
+    height: 40px;
+    width:auto;
+}
+.nav-links{
+    display:flex;
+    gap:2rem;
+    align-items:center;
+}
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark-1);
+    font-weight:500;
+    transition:color 0.3s ease;
+}
+.cart-count{
+    background:var(--primary-blue);
+    color:white;
+    padding:0.2rem 0.5 rem;
+    border-radius:50%;
+    font-size:0.9rem;
+}
+
+a{
+    text-decoration:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(0, 35, 118);    
+    padding-right: 20px;
+    font-size:x-large; 
+}
+/* hover lines under navigation bar icons */
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; 
+  }
+  a:hover::after {
+    width: 70%; 
+  }
+
+
+
 
     </style>
 </head>
+
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <link rel="icon" href="images/logo.png">
+            <span><img src="images/logo3.png" alt="Logo" 
+                width="200"class="logo"></span>
+        </a>
+
+    <!--calling the html files(products,signup,cart)-->
+
+    <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="signup.html"class="auth-link">Sign Up</a>
+        <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
+
+    </div>
+    </nav>
 
 <body>
     <div class="container">

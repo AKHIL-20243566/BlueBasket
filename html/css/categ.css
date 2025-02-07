@@ -159,17 +159,17 @@ a {
 }
 .atc {
     display: block;
-    width: 80%; /* Reduced width */
+    width: 80%;
     background-color: #1a73e8;
     color: white;
-    font-size: 14px; /* Smaller font */
+    font-size: 14px;
     font-weight: bold;
-    padding: 8px; /* Reduced padding */
+    padding: 8px;
     border: none;
-    border-radius: 20px; /* Maintains rounded style */
+    border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 10px auto; /* Centers the button */
+    margin: 10px auto; 
 }
 .atc:hover {
     background-color: #1558b0;

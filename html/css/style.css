@@ -64,7 +64,8 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 0.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     height: 50px;
     left: 22%;
     background-color: #fff;
@@ -143,19 +144,25 @@ body{
    
     
 }
+
 /* Product grid */
 .product-grid{
-    display:grid;
-    grid-template-columns: repeat(auto-fill,minimax(280px,1fr));
-    gap:2rem;
-    padding:2rem 0;
+    display:flex;
+    gap: 20px; /* Space between cards */
+    justify-content: space-between;
+    width: 100%;
+    
+    
+   
 }
 .product-card {
+    flex: 1;
+    margin: 30px 30px 30px 30px;
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding-bottom: 20px;
 }
 
 .product-card:hover {
@@ -164,13 +171,14 @@ body{
 
 .product-image {
     width: 100%;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-bottom: 2px solid var(--light-1);
 }
 
 .product-info {
     padding: 1.2rem;
+    text-align: center;
 }
 
 .product-price {
@@ -194,6 +202,27 @@ body{
     background: #ccc;
     cursor: not-allowed;
 }
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    gap: 30px; /* Adds space between items */
+    width: 80%;
+    max-width: 1200px; /* Prevents the grid from stretching too much */
+    margin: 0 auto;
+
+}
+
+.categories .category-item:last-child:nth-child(odd) {
+    grid-column: span 2; /* Makes the last item take full width */
+    justify-self: center; /* Centers it horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Adjust to prevent stretching */
+    margin: 0 auto; /* Ensures it's centered */
+}
+
 
 nav{
     flex: 1;
