@@ -123,6 +123,7 @@ a {
     grid-template-columns:repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
+    
 }
 .item-card {
     background: white;
@@ -131,9 +132,11 @@ a {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    border: 2px solid #bde4f3; 
 }
 .item-card:hover {
     transform: scale(1.05);
+    border-color: #92d3ec; 
 }
 .item-card img {
     width: 100%;
@@ -153,6 +156,23 @@ a {
 
 .item-card {
     position: relative;
+}
+.atc {
+    display: block;
+    width: 80%; /* Reduced width */
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px; /* Smaller font */
+    font-weight: bold;
+    padding: 8px; /* Reduced padding */
+    border: none;
+    border-radius: 20px; /* Maintains rounded style */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px auto; /* Centers the button */
+}
+.atc:hover {
+    background-color: #1558b0;
 }
 
 

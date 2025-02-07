@@ -1,10 +1,10 @@
-<!-- Add after navbar -->
+<!-- Add after navbar 
 <main class="container">
     <h1 class="page-title">Your Cart</h1>
     
     <div class="cart-layout">
         <section class="cart-items">
-            <!-- Items loaded via JS -->
+             Items loaded via JS
         </section>
 
         <aside class="cart-summary">
@@ -17,7 +17,7 @@
         </aside>
     </div>
 </main>
-<!-- Enhancements -->
+ Enhancements 
 <style>
     .cart-layout {
         display: flex;
@@ -60,4 +60,76 @@
 
         updateCartUI();
     });
-</script>
+</script> -->
+
+<!-- Add after navbar -->
+<main class="container">
+    <h1 class="page-title">Your Cart</h1>
+    
+    <div class="cart-layout">
+        <section class="cart-items">
+            <!-- Items loaded via JS -->
+        </section>
+
+        <aside class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-item">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            <button class="clear-cart-btn">Clear Cart</button>
+        </aside>
+    </div>
+    <script src="js/cart.js"></script>
+</main>
+
+<!-- Enhancements -->
+<style>
+    .cart-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+    .cart-items {
+        flex: 2;
+        min-width: 300px;
+    }
+    .cart-summary {
+        flex: 1;
+        min-width: 250px;
+        background: #f9f9f9;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .remove-item {
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+    .clear-cart-btn {
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        cursor: pointer;
+    }
+</style>
+
+
+
