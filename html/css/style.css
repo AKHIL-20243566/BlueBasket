@@ -133,6 +133,16 @@ body{
 .search-input:focus + .search-dropdown {
     display: block;
 }
+
+.hero {
+    background-image: url("../images/pastelbg..jpg");
+    background-size: cover;
+    height: 450px; 
+    margin-bottom: 30px;
+    display: flex;
+   
+    
+}
 /* Product grid */
 .product-grid{
     display:grid;
