@@ -81,3 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCartUI();
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const clearCartButton = document.querySelector(".clear-cart-btn");
+    const cartItemsContainer = document.querySelector(".cart-items");
+    const subtotalElement = document.getElementById("subtotal");
+
+    if (clearCartButton) {
+        clearCartButton.addEventListener("click", () => {
+            // Clear localStorage/cart array
+            localStorage.removeItem("cart"); 
+
+            // Clear the cart display
+            cartItemsContainer.innerHTML = "";
+
+            // Reset subtotal
+            subtotalElement.textContent = "$0.00";
+
+            console.log("Cart cleared!");
+        });
+    }
+});
+
