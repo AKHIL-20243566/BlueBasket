@@ -1,24 +1,17 @@
-CREATE DATABASE bluebasket;
+create database User;
+use User;
+create table details(Slno INT AUTO_INCREMENT primary key, Full_name varchar(100), Email varchar(100), Password varchar(50), check(char_length(Password)>=8));
+insert into details (Full_name, Email, Password) values('Justin Biju', '2024jb@gmail.com', '12345678');
 
-USE bluebasket;
+create table itemdet(Item varchar(100), Model_name varchar(100) NOT NULL,Used ENUM('Yes','No'), category varchar(100), CurrentCondition varchar(100),
+  year_of_purchase INT, Warranty ENUM('Yes','No'), Price_in_Rs INT, Status ENUM('In Stock','Out of Stock'), Contact_No BIGINT);
+insert into itemdet values('Casio watch','G-SHOCK AWM-500','Yes','Electronics','Working','2020','Yes',40000,'In Stock',9344561792);
 
-CREATE TABLE users (
+create table cart (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
-
-
-CREATE TABLE cart (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
+    Email varchar NOT NULL,
     product_id INT NOT NULL,
-    product_name VARCHAR(255) NOT NULL,
-    product_price DECIMAL(10,2) NOT NULL,
     quantity INT DEFAULT 1,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
 );
