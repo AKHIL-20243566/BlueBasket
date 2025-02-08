@@ -1,70 +1,40 @@
-<!-- Add after navbar 
-<main class="container">
-    <h1 class="page-title">Your Cart</h1>
-    
-    <div class="cart-layout">
-        <section class="cart-items">
-             Items loaded via JS
-        </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluebasket-Cart</title>
 
-        <aside class="cart-summary">
-            <h2>Order Summary</h2>
-            <div class="summary-item">
-                <span>Subtotal:</span>
-                <span id="subtotal">$0.00</span>
-            </div>
-            <button class="checkout-btn">Proceed to Checkout</button>
-        </aside>
+
+    <nav class="navbar">
+        <a href="index.html" class="brand">
+            <link rel="icon" href="images/logo.png">
+            <span><img src="images/logo3.png" alt="Logo" 
+                width="200"class="logo"></span>
+        </a>
+
+    <!--calling the html files(products,signup,cart)-->
+
+    <div class="nav-links">
+        <a href="about.html">About</a>
+        <a href="signup.html"class="auth-link">Sign Up</a>
+        <a href="login.html"class="auth-link">Login</a>
+        <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
+
     </div>
-</main>
- Enhancements 
-<style>
-    .cart-layout {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: space-between;
-    }
-    .cart-items {
-        flex: 2 ;
-        min-width: 300px;
-    }
-    .cart-summary {
-        flex: 1;
-        min-width: 250px;
-        background: #f9f9f9;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-</style>
+    </nav>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Enhance cart functionality
-        function updateCartUI() {
-            const cartItemsContainer = document.querySelector(".cart-items");
-            const cartData = JSON.parse(localStorage.getItem("bluebasket_cart")) || [];
-            cartItemsContainer.innerHTML = cartData.length ? "" : "<p>Your cart is empty.</p>";
-            
-            cartData.forEach(item => {
-                const div = document.createElement("div");
-                div.classList.add("cart-item");
-                div.innerHTML = `
-                    <p><strong>${item.name}</strong> - $${item.price} x ${item.quantity}</p>
-                    <button class="remove-item" data-id="${item.id}">Remove</button>
-                `;
-                cartItemsContainer.appendChild(div);
-            });
-        }
+</head>
 
-        updateCartUI();
-    });
-</script> -->
+    
+<body>
 
-<!-- Add after navbar -->
 <main class="container">
-    <h1 class="page-title">Your Cart</h1>
+    <div class="cart-container">
+        <img src="images/emptycart.png" alt="Cart Image" class="cart-image" >
+    </div>
+    <h1 class="page-title" style="margin-left: 44%;">Your Cart</h1>
+    
     
     <div class="cart-layout">
         <section class="cart-items">
@@ -83,6 +53,7 @@
     </div>
     <script src="js/cart.js"></script>
 </main>
+</body>
 
 <!-- Enhancements -->
 <style>
@@ -114,14 +85,15 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     }
     .remove-item {
-        background: red;
+        background: rgb(87, 165, 207);
         color: white;
         border: none;
         padding: 5px 10px;
         cursor: pointer;
+        border-radius: 50%;
     }
     .clear-cart-btn {
-        background: #ff4d4d;
+        background: rgb(87, 165, 207);
         color: white;
         border: none;
         padding: 10px;
@@ -129,6 +101,97 @@
         width: 100%;
         cursor: pointer;
     }
+    .checkout-btn{
+        background: rgb(87, 165, 207);
+        color: white;
+        border: none;
+        padding: 10px;
+        margin-top: 10px;
+        width: 100%;
+        cursor: pointer;
+    }
+    .cart-container {
+    text-align: center;  /* Centers the image */
+    margin-bottom: 10px; /* Adds space below the image */
+}
+
+.cart-image {
+    width: 150px;  /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    margin-top: 50px;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    z-index: index 1000;
+    width: 100%;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+}
+.logo{
+    height: 40px;
+    width:auto;
+}
+.nav-links{
+    display:flex;
+    gap:2rem;
+    align-items:center;
+}
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark-1);
+    font-weight:500;
+    transition:color 0.3s ease;
+}
+.cart-count{
+    background:var(--primary-blue);
+    color:white;
+    padding:0.2rem 0.5 rem;
+    border-radius:50%;
+    font-size:0.9rem;
+}
+
+a{
+    text-decoration:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(0, 35, 118);    
+    padding-right: 20px;
+    font-size:x-large; 
+}
+/* hover lines under navigation bar icons */
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; 
+  }
+  a:hover::after {
+    width: 70%; 
+  }
 </style>
 
 

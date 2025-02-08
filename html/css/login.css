@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    
+}
+
+
+.container {
+    display: flex;
+    width: 900px;
+    background: #72d0f947;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+.form-container {
+    width: 40%;
+    padding: 40px;
+    background: #efefef;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.google-signup {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #4285F4;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #666;
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.create-account {
+    background: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.create-account:hover {
+    background: #333;
+}
+
+.login-link {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* hover lines under navigation bar icons */
+.login{
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  .login::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.5px;
+    background-color: black;
+    transition: width 0.5s ease; 
+  }
+  .login:hover::after {
+    width: 100%; 
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    position: fixed;
+    top: 0;
+    z-index: index 1000;
+    width: 100%;
+}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+    text-decoration:none;
+}
+.logo{
+    height: 40px;
+    width:auto;
+}
+.nav-links{
+    display:flex;
+    gap:2rem;
+    align-items:center;
+}
+.nav-links a{
+    text-decoration:none;
+    color:var(--dark-1);
+    font-weight:500;
+    transition:color 0.3s ease;
+}
+.cart-count{
+    background:var(--primary-blue);
+    color:white;
+    padding:0.2rem 0.5 rem;
+    border-radius:50%;
+    font-size:0.9rem;
+}
+
+a{
+    text-decoration:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:rgb(0, 35, 118);    
+    padding-right: 20px;
+    font-size:x-large; 
+}
+/* hover lines under navigation bar icons */
+a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; 
+  }
+  a:hover::after {
+    width: 70%; 
+  }
+
+

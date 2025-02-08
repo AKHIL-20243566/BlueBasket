@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Blue Basket</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script defer src="auth.js"></script>
+</head>
+<nav class="navbar">
+    <a href="index.html" class="brand">
+        <link rel="icon" href="images/logo.png">
+        <span><img src="images/logo3.png" alt="Logo" 
+            width="200"class="logo"></span>
+    </a>
+
+<!--calling the html files(products,signup,cart)-->
+
+<div class="nav-links">
+    <a href="about.html">About</a>
+    <a href="signup.html"class="auth-link">Sign Up</a>
+    <a href="login.html"class="auth-link">Login</a>
+    <a href="cart.html"><class="cart-link">🛒<span class="cart-count">0</a>
+
+</div>
+</nav>
+
+<body>
+    <div class="container">
+        <img src="images/basketunder.png">
+        <div class="form-container">
+            <h2>Login</h2>
+            <button class="google-signup">Login with Google</button>
+            <p>OR</p>
+            <form>
+                
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                
+                <label for="password">Password*</label>
+                <input type="password" id="password" placeholder="Enter password" required minlength="8">
+                
+                <button type="submit" class="create-account">Login</button>
+            </form>
+            <p class="login-link">Don't have an account? 
+                <a class="login" href="signup.html">Sign up</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
