@@ -187,21 +187,7 @@ body{
     margin: 0.5rem 0;
 }
 
-.add-to-cart {
-    background: var(--primary-blue);
-    color: white;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    cursor: pointer;
-    width: 100%;
-    transition: opacity 0.3s ease;
-}
 
-.add-to-cart:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-}
 
 .categories{
     display: grid;
