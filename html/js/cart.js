@@ -51,13 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
             const div = document.createElement("div");
             div.classList.add("cart-item");
             div.innerHTML = `
-                <p><strong>${item.name}</strong> - $${item.price} x ${item.quantity}</p>
+                <p><strong>${item.name}</strong> - ₹${item.price} x ${item.quantity}</p>
                 <button class="remove-item" data-id="${item.id}">Remove</button>
             `;
             cartItemsContainer.appendChild(div);
         });
 
-        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        subtotalElement.textContent = `₹${subtotal.toFixed(2)}`;
 
         // Attach event listeners to remove buttons
         document.querySelectorAll(".remove-item").forEach(button => {
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cartItemsContainer.innerHTML = "";
 
             // Reset subtotal
-            subtotalElement.textContent = "$0.00";
+            subtotalElement.textContent = "₹0.00";
 
             console.log("Cart cleared!");
         });

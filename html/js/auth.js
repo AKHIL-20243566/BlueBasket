@@ -1,58 +1,46 @@
-//User Management
-const USERS_KEY = 'bluebasket_users';
-
-class AuthManager{
-    constructor(){
-        this.users = safeJSON.parse(localStorage.getItem(USERS_KEY))||[];
-    }
-    //sign up features
-    signUp(userData){
-        if(this.users.some(user => user.email === userData.email)){
-            throw new Error('user alreday exists');
-        }
-        this.users.push(userData);
-        localStorage.setItem(USERS_KEY , JSON.stringify(this.users));
-    }
-    //Considering other error cases that may occur
-    login(email,password){
-        const user = this.users.find(u =>
-            u.email === email && u.password === password
-        );
-
-        if(!user) throw new Error("Invalid Credentials");
-        return user;
-    }
-}
-
-//Handling Signup Form
-document.addEventListener('DOMContentLoaded', () => {
-    const signupForm = document.getElementById('signup-form');
-    if(!signupForm) return;
-
-    const authManager = new AuthManager();
-
-    signupForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const formData = new FormData(e.target);
-        const userData = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            password: formData.get('password')
-        };
-
-        try {
-            authManager.signUp(userData);
-            window.location.href = 'products.html';
-        } catch (error) {
-            alert(error.message);
-        }
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+  
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+  
+    const response = await fetch("http://localhost:5000/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
     });
-});
-// Add error display element
-<div class="error-message"></div>
-function showError(message) {
-    const errorEl = document.querySelector('.error-message');
-    errorEl.textContent = message;
-    setTimeout(() => errorEl.textContent = '', 3000);
-}
+  
+    const data = await response.json();
+  
+    if (response.ok) {
+      alert(data.message);
+      window.location.href = "login.html"; // Redirect to login page
+    } else {
+      alert(data.error);
+    }
+  });
+  
+  document.getElementById("loginForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+  
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+  
+    const response = await fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+  
+    const data = await response.json();
+  
+    if (response.ok) {
+      alert(data.message);
+      localStorage.setItem("user", JSON.stringify(data.user)); // Store user info
+      window.location.href = "index.html"; // Redirect to homepage
+    } else {
+      alert(data.error);
+    }
+  });
+  
